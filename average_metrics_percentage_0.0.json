@@ -1,0 +1,9 @@
+{
+  "percentage": 0.0,
+  "avg_bleu": 0.0,
+  "avg_meteor": 0.0,
+  "avg_rougeL": 0.0,
+  "avg_cider": 0.0,
+  "avg_val_loss": 0.0,
+  "seeds_used": 1
+}

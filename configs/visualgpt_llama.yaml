@@ -1,0 +1,23 @@
+model:
+  llama_model_path: '/home/yazan/Llama-2-13b-hf'  # Path to Llama model
+  vit: 'openai/clip-vit-base-patch32'  # Vision model name
+  max_length: 512  # Max sequence length
+  freeze_vit: true  # Freeze vision model
+  llama_embed_dim: 5120  # Llama embedding dimension
+  num_hidden_layers: 4  # Number of hidden layers
+  cross_attention_heads: 40  # Cross attention heads
+  intermediate_size: 13824  # Intermediate size
+  num_visual_features: 50  # Number of visual features
+  vit_embed_dim: 768  # Vision embedding dimension
+  pad_token_id: 0  # Pad token ID
+  tau: 0.5  # Tau for gating
+dataset:
+  coco:
+    val_annotation_path: /home/yazan/VisualLlama/coco/annotations/captions_val2017.json  # Val annotations
+    val_image_path: /home/yazan/VisualLlama/coco/val2017  # Val images
+train:
+  epochs: 15  # Number of epochs increased to observe decreasing loss
+  lr: 5e-5  # Learning rate
+  accumulation_steps: 4  # Gradient accumulation steps
+  patience: 3  # Patience for early stopping
+  validate_interval: 2  # Validation interval

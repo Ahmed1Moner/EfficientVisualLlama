@@ -1,0 +1,31 @@
+dataset:
+  coco:
+    annotation_path: data/coco/annotations/tiny_train2017.json
+    image_path: data/coco/images
+model:
+  arch: visualgpt
+  attn_dropout: 0.1
+  cross_attention_dim: 5120
+  cross_attention_heads: 40
+  embd_dropout: 0.1
+  freeze_llama: false
+  freeze_vit: true
+  length_penalty: 1.0
+  llama_embed_dim: 5120
+  llama_model_path: /home/yazan/Llama-2-13b-hf
+  max_length: 40
+  num_beams: 5
+  pretrained: true
+  repetition_penalty: 1.0
+  resid_dropout: 0.1
+  top_p: 0.9
+  vit: openai/clip-vit-base-patch32
+  vit_embed_dim: 768
+train:
+  batch_size: 4
+  epochs: 1
+  gradient_accumulation_steps: 4
+  log_interval: 10
+  lr: 5e-5
+  save_interval: 50
+  warmup_steps: 1000
